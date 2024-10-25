@@ -5,7 +5,7 @@ https://github.com/user-attachments/assets/3ff035b7-455f-4ff5-aef6-b95363c50163
 ## インストール
 1. [このファイル](https://github.com/quartz1216/vivaldi-gutter/releases/download/v1.0/access.css)をダウンロード
 2. ダウンロードしたファイルを適当なフォルダに入れる
-3. vivaldi://experiments にアクセス
+3. vivaldi:experimentsにアクセス
 4. Allow custom css modifire にチェック
 5. 設定>外観に移動
 6. カスタムcssのパスをファイルを入れたフォルダに設定
