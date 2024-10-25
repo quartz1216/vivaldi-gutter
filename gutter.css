@@ -1,0 +1,100 @@
+#browser {
+	--gutter-size: 12px;
+	backdrop-filter: var(--backgroundBlur);
+}
+
+div#modal-bg {
+	border-radius: var(--radius);
+}
+
+#tabs-tabbar-container,
+.tabbar-wrapper,
+.tabbar-workspace-button,
+div#panels-container,
+.startpage-navigation,
+.startpage-navigation-group,
+#switch {
+	background: unset !important;
+	backdrop-filter: unset !important;
+	box-shadow: unset !important;
+	border: unset !important
+}
+
+#webview-container {
+	border-radius: var(--radius);
+	overflow: hidden;
+	margin-left: var(--gutter-size);
+}
+
+.tabbar-wrapper>.tabbar-wrapper {
+	margin-left: var(--gutter-size)
+}
+
+#panels-container {
+	background: none !important;
+	transition: width 0.3s ease, opacity 0.3s ease !important;
+
+	&:not(:hover).icons:not(.toolbar-edit-mode *) {
+		width: var(--gutter-size) !important;
+		opacity: 0;
+	}
+
+	.panel-group {
+		margin-left: var(--gutter-size);
+		border-radius: var(--radius);
+		overflow: hidden;
+
+		.panel {
+			background: var(--colorBg);
+		}
+	}
+
+	.button-toolbar {
+		box-shadow: unset !important;
+		border-radius: var(--radius) !important;
+	}
+
+}
+
+.mainbar {
+	background: none !important;
+	transition: height 0.3s ease, opacity 0.3s ease !important;
+	overflow: hidden;
+	-webkit-app-region: no-drag !important;
+	height: 48px;
+	opacity: 1;
+	border: unset !important;
+
+	&:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
+		height: var(--gutter-size) !important;
+		opacity: 0 !important;
+		overflow: hidden !important;
+
+	}
+}
+
+
+.tabbar-wrapper>.tabbar-wrapper {
+	margin-top: 36px;
+}
+
+
+
+.UrlBar-AddressField {
+	height: 36px !important;
+	border-radius: var(--radiusRound);
+	background-color: var(--colorBgAlphaHeavy);
+	border: unset !important;
+	padding: 0 10px;
+}
+
+footer {
+	background: none !important;
+	transition: height 0.3s ease, opacity 0.3s ease !important;
+	height:34px;
+	&:not(:hover):not(.toolbar-edit-mode *) {
+		height: var(--gutter-size) !important;
+		opacity: 0;
+	}
+
+}
