@@ -11,3 +11,5 @@
 - アドレスバー->表示・上
 - パネルバー-> 表示・右
 - ステータスバー→ 常に表示
+
+<div><video controls src="https://github.com/quartz1216/vivaldi-gutter/blob/main/video.mp4" muted="false"></video></div>
