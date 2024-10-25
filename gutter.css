@@ -1,3 +1,5 @@
+/* @import url('https://cdn.jsdelivr.net/gh/quartz1216/vivaldi-gutter@refs/heads/main/source/gutter.css'); */
+
 #browser {
 	--gutter-size: 12px;
 	backdrop-filter: var(--backgroundBlur);
