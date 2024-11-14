@@ -1,35 +1,30 @@
-/* @import url('https://cdn.jsdelivr.net/gh/quartz1216/vivaldi-gutter@refs/heads/main/source/gutter.css'); */
-
 #browser {
 	--gutter-size: 12px;
 	backdrop-filter: var(--backgroundBlur);
-}
 
-div#modal-bg {
-	border-radius: var(--radius);
-}
+	&.minimal-ui {
+		#webview-container {
+			border-radius: 0 !important;
+		}
 
-#tabs-tabbar-container,
-.tabbar-wrapper,
-.tabbar-workspace-button,
-div#panels-container,
-.startpage-navigation,
-.startpage-navigation-group,
-#switch {
-	background: unset !important;
-	backdrop-filter: unset !important;
-	box-shadow: unset !important;
-	border: unset !important
+		.mainbar {
+			display: none !important;
+		}
+	}
 }
 
 #webview-container {
 	border-radius: var(--radius);
 	overflow: hidden;
-	margin-left: var(--gutter-size);
 }
 
 .tabbar-wrapper>.tabbar-wrapper {
-	margin-left: var(--gutter-size)
+	margin-top: 36px;
+	margin-inline: var(--gutter-size);
+
+	.tab {
+		border-radius: var(--radiusRound) !important;
+	}
 }
 
 #panels-container {
@@ -67,36 +62,73 @@ div#panels-container,
 	opacity: 1;
 	border: unset !important;
 
+	.UrlBar-AddressField {
+		height: 36px !important;
+		border-radius: var(--radiusRound);
+		background-color: var(--colorBgAlphaHeavy);
+		border: unset !important;
+		padding: 0 10px;
+	}
+
+	>div {
+		height: inherit !important;
+
+		.toolbar-mainbar,
+		.button-toolbar.toolbar-spacer-flexible {
+			height: inherit !important;
+			min-height: unset !important;
+		}
+	}
+
 	&:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
 		height: var(--gutter-size) !important;
 		opacity: 0 !important;
 		overflow: hidden !important;
-
 	}
 }
 
-
-.tabbar-wrapper>.tabbar-wrapper {
-	margin-top: 36px;
-}
-
-
-
-.UrlBar-AddressField {
-	height: 36px !important;
-	border-radius: var(--radiusRound);
-	background-color: var(--colorBgAlphaHeavy);
-	border: unset !important;
-	padding: 0 10px;
-}
-
-footer {
+.bookmark-bar {
 	background: none !important;
 	transition: height 0.3s ease, opacity 0.3s ease !important;
-	height:34px;
-	&:not(:hover):not(.toolbar-edit-mode *) {
-		height: var(--gutter-size) !important;
-		opacity: 0;
+	height: 48px;
+	opacity: 1;
+	border: unset !important;
+	&:not(:hover){
+		height: var(--gutter-size)!important;
+		opacity: 0!important;
 	}
+	button.bookmarkbarItem{
+		background-color: inherit!important;
+	}
+}
 
+/*Theme*/
+#tabs-tabbar-container, .tabbar-wrapper, .tabbar-workspace-button, div#panels-container, .startpage-navigation, .startpage-navigation-group, #switch {
+	background: unset !important;
+	backdrop-filter: unset !important;
+	box-shadow: unset !important;
+	border: unset !important
+}
+.manager-editor, .sortselector.sortselector-tableheader, .manager-content, .tree-row.folder, .NotesManager, .manager>.toolbar {
+	background: unset !important;
+}
+
+input[type="search"] {
+	background-color: var(--colorBgAlphaHeavy) !important;
+}
+
+.toolbar-default .button-toolbar>button:enabled {
+	background-color: var(--colorBgAlphaHeavy) !important;
+	background-image: none !important;
+}
+
+#ui-region-panel {
+	max-width: unset !important;
+}
+/* 
+#browser:not(.minimal-ui) div#main {
+	margin-bottom: var(--gutter-size);
+} */
+div#modal-bg {
+	border-radius: var(--radius);
 }
