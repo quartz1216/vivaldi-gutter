@@ -21,6 +21,7 @@
 .tabbar-wrapper>.tabbar-wrapper {
 	margin-top: 36px;
 	margin-inline: var(--gutter-size);
+	-webkit-app-region: drag;
 
 	.tab {
 		border-radius: var(--radiusRound) !important;
@@ -56,7 +57,6 @@
 .mainbar {
 	background: none !important;
 	transition: height 0.3s ease, opacity 0.3s ease !important;
-	overflow: hidden;
 	-webkit-app-region: no-drag !important;
 	height: 48px;
 	opacity: 1;
@@ -69,10 +69,11 @@
 		border: unset !important;
 		padding: 0 10px;
 	}
-
 	>div {
 		height: inherit !important;
-
+		.toolbar-mainbar {
+			padding-left: 200px;
+		} 
 		.toolbar-mainbar,
 		.button-toolbar.toolbar-spacer-flexible {
 			height: inherit !important;
@@ -93,28 +94,31 @@
 	height: 48px;
 	opacity: 1;
 	border: unset !important;
-	&:not(:hover){
-		height: var(--gutter-size)!important;
-		opacity: 0!important;
+
+	&:not(:hover) {
+		height: var(--gutter-size) !important;
+		opacity: 0 !important;
 	}
-	button.bookmarkbarItem{
-		background-color: inherit!important;
+
+	button.bookmarkbarItem {
+		background-color: inherit !important;
+	}
+
+	.observer {
+		justify-content: space-evenly;
 	}
 }
 
 /*Theme*/
-#tabs-tabbar-container, .tabbar-wrapper, .tabbar-workspace-button, div#panels-container, .startpage-navigation, .startpage-navigation-group, #switch {
+#tabs-tabbar-container,.tabbar-wrapper,.tabbar-workspace-button,#panels-container,.startpage-navigation,.startpage-navigation-group,#switch {
 	background: unset !important;
 	backdrop-filter: unset !important;
 	box-shadow: unset !important;
 	border: unset !important
 }
-.manager-editor, .sortselector.sortselector-tableheader, .manager-content, .tree-row.folder, .NotesManager, .manager>.toolbar {
-	background: unset !important;
-}
 
-input[type="search"] {
-	background-color: var(--colorBgAlphaHeavy) !important;
+.manager-editor,.sortselector.sortselector-tableheader,.manager-content,.tree-row.folder,.NotesManager,.manager>.toolbar {
+	background: unset !important;
 }
 
 .toolbar-default .button-toolbar>button:enabled {
@@ -124,11 +128,96 @@ input[type="search"] {
 
 #ui-region-panel {
 	max-width: unset !important;
+	min-width: unset !important;
 }
-/* 
-#browser:not(.minimal-ui) div#main {
-	margin-bottom: var(--gutter-size);
-} */
-div#modal-bg {
-	border-radius: var(--radius);
+
+.StatusInfo-Content {
+	margin-inline: auto;
+	border-radius: var(--radiusRound) !important;
+}
+
+.find-in-page-wrapper {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	left: 0;
+	background: unset !important;
+	border: unset !important;
+	display: flex;
+	.find-in-page {
+		margin-inline: auto;
+		background-color: var(--colorBgLightIntense);
+		margin-top: var(--gutter-size);
+		border-radius: var(--radiusRound);
+		padding-inline: 6px !important;
+		span.fip-input-label {
+			display: none;
+		}
+	}
+}
+
+
+
+
+rect.stack-frame {
+    stroke: var(--colorAccentBgDarker) !important;
+}
+svg.svg-tab-stack {
+	border-radius: 15px !important;
+}
+#app .svg-tab-selection .outer {
+    stroke: transparent !important;
+	fill: transparent !important
+}
+.svg-tab-stack rect, .svg-tab-selection rect {
+    rx: 15px!important;
+    ry: 15px!important;
+}
+rect.inner {
+    fill: transparent !important;
+}
+.tabs-left .tab-in-accordion .svg-tab-selection .inner{
+    y: 0px;
+    height: 30px;
+}
+.tab-position.accordion-toggle-arrow.closed.active {
+    background: transparent !important;
+}
+.tab:not(.active) {
+    background-color: transparent !important;
+}
+.toolbar-mainbar {
+    fill: var(--colorFg);
+}
+#browser.win .window-buttongroup button ,.window-buttongroup.on-mainbar{
+    fill: inherit!important;
+} 
+
+.tab-in-accordion {
+    background-color: transparent!important;
+}
+.tab.active {
+    overflow: auto;
+}
+
+.tabswitcher.list {
+    display: flex!important;
+    img.visual-list-preview {
+    	display: none;
+	}
+    ul.listed-tabs {
+    	width: 100%;
+	}
+}
+
+#modal-bg.modal-tabswitcher {
+    top: 10%;
+    transform: unset !important;
+}
+
+
+
+button.vivaldi {
+    position: absolute !important;
+	margin: 7px 18px!important;
 }
