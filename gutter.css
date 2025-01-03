@@ -24,7 +24,7 @@
 	-webkit-app-region: drag;
 
 	.tab {
-		border-radius: var(--radiusRound) !important;
+		border-radius: 16px !important;
 	}
 }
 
@@ -157,57 +157,70 @@
 }
 
 
-
-
-rect.stack-frame {
-    stroke: var(--colorAccentBgDarker) !important;
-}
 svg.svg-tab-stack {
 	border-radius: 15px !important;
 }
-#app .svg-tab-selection .outer {
-    stroke: transparent !important;
-	fill: transparent !important
+rect{
+	&.outer{
+		stroke: transparent !important;
+		fill: transparent !important;
+	}
+	&.inner{
+		fill: transparent !important;
+		stroke: var(--colorAccentBgDarker) !important;
+	}
+	&.stack-frame{
+		stroke: var(--colorAccentBgDarker) !important;
+	}
 }
+
+
 .svg-tab-stack rect, .svg-tab-selection rect {
-    rx: 15px!important;
-    ry: 15px!important;
+	rx: 15px !important;
+	ry: 15px !important;
 }
-rect.inner {
-    fill: transparent !important;
+
+
+
+.tabs-left .tab-in-accordion .svg-tab-selection .inner {
+	y: 0px;
+	height: 30px;
 }
-.tabs-left .tab-in-accordion .svg-tab-selection .inner{
-    y: 0px;
-    height: 30px;
-}
+
 .tab-position.accordion-toggle-arrow.closed.active {
-    background: transparent !important;
+	background: transparent !important;
 }
+
 .tab:not(.active) {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
+
 .toolbar-mainbar {
-    fill: var(--colorFg);
+	fill: var(--colorFg);
 }
-#browser.win .window-buttongroup button ,.window-buttongroup.on-mainbar{
-    fill: inherit!important;
-} 
+
+#browser.win .window-buttongroup button, .window-buttongroup.on-mainbar {
+	fill: inherit !important;
+}
 
 .tab-in-accordion {
-    background-color: transparent!important;
+	background-color: transparent !important;
 }
+
 .tab.active {
-    overflow: auto;
+	overflow: auto;
 }
 
 .tabswitcher.list {
-    display: flex!important;
-    img.visual-list-preview {
-    	display: none;
-	}
-    ul.listed-tabs {
-    	width: 100%;
-	}
+	display: flex !important;
+}
+
+img.visual-list-preview {
+	display: none;
+}
+
+ul.listed-tabs {
+	width: 100%;
 }
 
 #modal-bg.modal-tabswitcher {
@@ -215,9 +228,25 @@ rect.inner {
     transform: unset !important;
 }
 
-
-
 button.vivaldi {
-    position: absolute !important;
-	margin: 7px 18px!important;
+	position: absolute !important;
+	margin: 7px 18px !important;
+}
+
+.dial {
+	background: transparent !important;
+	box-shadow: unset !important;
+}
+
+img.favicon {
+	filter: drop-shadow(0px 0px 0.5px var(--colorFg));
+}
+
+img.favicon, .favicon > img {
+	filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
+}
+
+.SpeedDialView-SearchField {
+    border-radius: var(--radiusRound);
+    padding-inline: 12px;
 }
