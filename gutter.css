@@ -1,4 +1,4 @@
-#browser {
+#browser.address-top.bookmark-bar-bottom.tabs-left:has(.right) {
 	--gutter-size: 12px;
 	backdrop-filter: var(--backgroundBlur);
 
@@ -11,103 +11,124 @@
 			display: none !important;
 		}
 	}
-}
 
-#webview-container {
-	border-radius: var(--radius);
-	overflow: hidden;
-}
-
-.tabbar-wrapper>.tabbar-wrapper {
-	margin-top: 36px;
-	margin-inline: var(--gutter-size);
-	-webkit-app-region: drag;
-
-	.tab {
-		border-radius: 16px !important;
-	}
-}
-
-#panels-container {
-	background: none !important;
-	transition: width 0.3s ease, opacity 0.3s ease !important;
-
-	&:not(:hover).icons:not(.toolbar-edit-mode *) {
-		width: var(--gutter-size) !important;
-		opacity: 0;
-	}
-
-	.panel-group {
-		margin-left: var(--gutter-size);
+	#webview-container {
 		border-radius: var(--radius);
 		overflow: hidden;
-
-		.panel {
-			background: var(--colorBg);
+		.find-in-page-wrapper {
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			left: 0;
+			background: unset !important;
+			border: unset !important;
+			display: flex;
+			.find-in-page {
+				margin-inline: auto;
+				background-color: var(--colorBgLightIntense);
+				margin-top: var(--gutter-size);
+				border-radius: var(--radiusRound);
+				padding-inline: 24px !important;
+				input[type="search"] {
+					border-radius: var(--radiusRound);
+				}
+			}
 		}
 	}
-
-	.button-toolbar {
-		box-shadow: unset !important;
-		border-radius: var(--radius) !important;
+	
+	.tabbar-wrapper>.tabbar-wrapper {
+		margin-top: 36px;
+		margin-inline: var(--gutter-size);
+		-webkit-app-region: drag;
+	
+		.tab {
+			border-radius: 16px !important;
+		}
 	}
-
-}
-
-.mainbar {
-	background: none !important;
-	transition: height 0.3s ease, opacity 0.3s ease !important;
-	-webkit-app-region: no-drag !important;
-	height: 48px;
-	opacity: 1;
-	border: unset !important;
-
-	.UrlBar-AddressField {
-		height: 36px !important;
-		border-radius: var(--radiusRound);
-		background-color: var(--colorBgAlphaHeavy);
+	
+	#panels-container {
+		background: none !important;
+		transition: width 0.3s ease, opacity 0.3s ease !important;
+	
+		&:not(:hover).icons:not(.toolbar-edit-mode *) {
+			width: var(--gutter-size) !important;
+			opacity: 0;
+		}
+	
+		.panel-group {
+			margin-left: var(--gutter-size);
+			border-radius: var(--radius);
+			overflow: hidden;
+	
+			.panel {
+				background: var(--colorBg);
+			}
+		}
+	
+		.button-toolbar {
+			box-shadow: unset !important;
+			border-radius: var(--radius) !important;
+		}
+	
+	}
+	
+	.mainbar {
+		background: none !important;
+		transition: height 0.3s ease, opacity 0.3s ease !important;
+		-webkit-app-region: no-drag !important;
+		height: 48px;
+		opacity: 1;
 		border: unset !important;
-		padding: 0 10px;
-	}
-	>div {
-		height: inherit !important;
-		.toolbar-mainbar {
-			padding-left: 200px;
-		} 
-		.toolbar-mainbar,
-		.button-toolbar.toolbar-spacer-flexible {
+	
+		.UrlBar-AddressField {
+			height: 36px !important;
+			border-radius: var(--radiusRound);
+			background-color: var(--colorBgAlphaHeavy);
+			border: unset !important;
+			padding: 0 10px;
+		}
+		>div {
 			height: inherit !important;
-			min-height: unset !important;
+			.toolbar-mainbar {
+				padding-left: 200px;
+			} 
+			.toolbar-mainbar,
+			.button-toolbar.toolbar-spacer-flexible {
+				height: inherit !important;
+				min-height: unset !important;
+			}
+		}
+	
+		&:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
+			height: var(--gutter-size) !important;
+			opacity: 0 !important;
+			overflow: hidden !important;
 		}
 	}
-
-	&:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
-		height: var(--gutter-size) !important;
-		opacity: 0 !important;
-		overflow: hidden !important;
+	
+	.bookmark-bar {
+		background: none !important;
+		transition: height 0.3s ease, opacity 0.3s ease !important;
+		height: 48px;
+		opacity: 1;
+		border: unset !important;
+	
+		&:not(:hover) {
+			height: var(--gutter-size) !important;
+			opacity: 0 !important;
+		}
+	
+		button.bookmarkbarItem {
+			background-color: inherit !important;
+		}
+	
+		.observer {
+			justify-content: space-evenly;
+		}
 	}
 }
 
-.bookmark-bar {
-	background: none !important;
-	transition: height 0.3s ease, opacity 0.3s ease !important;
-	height: 48px;
-	opacity: 1;
-	border: unset !important;
 
-	&:not(:hover) {
-		height: var(--gutter-size) !important;
-		opacity: 0 !important;
-	}
-
-	button.bookmarkbarItem {
-		background-color: inherit !important;
-	}
-
-	.observer {
-		justify-content: space-evenly;
-	}
-}
 
 /*Theme*/
 #tabs-tabbar-container,.tabbar-wrapper,.tabbar-workspace-button,#panels-container,.startpage-navigation,.startpage-navigation-group,#switch {
@@ -136,25 +157,7 @@
 	border-radius: var(--radiusRound) !important;
 }
 
-.find-in-page-wrapper {
-	position: absolute;
-	z-index: 10;
-	right: 0;
-	left: 0;
-	background: unset !important;
-	border: unset !important;
-	display: flex;
-	.find-in-page {
-		margin-inline: auto;
-		background-color: var(--colorBgLightIntense);
-		margin-top: var(--gutter-size);
-		border-radius: var(--radiusRound);
-		padding-inline: 6px !important;
-		span.fip-input-label {
-			display: none;
-		}
-	}
-}
+
 
 
 svg.svg-tab-stack {
@@ -238,9 +241,6 @@ button.vivaldi {
 	box-shadow: unset !important;
 }
 
-img.favicon {
-	filter: drop-shadow(0px 0px 0.5px var(--colorFg));
-}
 
 img.favicon, .favicon > img {
 	filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
@@ -250,3 +250,24 @@ img.favicon, .favicon > img {
     border-radius: var(--radiusRound);
     padding-inline: 12px;
 }
+
+
+win 
+normal
+theme-dark 
+acc-dark 
+bg-dark 
+color-behind-tabs-off 
+ui-transparent-tabs 
+theme-id-Vivaldi3x 
+disable-titlebar 
+isblurred 
+simple-scrollbar 
+density-on 
+menu-icon
+alt-tabs
+accordion-tabs-on 
+stacks-accordion 
+address-top 
+bookmark-bar-bottom 
+tabs-left
