@@ -1,6 +1,9 @@
-#browser.address-top.bookmark-bar-bottom.tabs-left:has(.right) {
+#browser.tabs-left {
 	--gutter-size: 12px;
-	backdrop-filter: var(--backgroundBlur);
+
+	#main {
+		backdrop-filter: var(--backgroundBlur);
+	}
 
 	&.minimal-ui {
 		#webview-container {
@@ -15,6 +18,7 @@
 	#webview-container {
 		border-radius: var(--radius);
 		overflow: hidden;
+
 		.find-in-page-wrapper {
 			position: absolute;
 			z-index: 10;
@@ -23,63 +27,68 @@
 			background: unset !important;
 			border: unset !important;
 			display: flex;
+
 			.find-in-page {
 				margin-inline: auto;
 				background-color: var(--colorBgLightIntense);
 				margin-top: var(--gutter-size);
 				border-radius: var(--radiusRound);
 				padding-inline: 24px !important;
+
 				input[type="search"] {
 					border-radius: var(--radiusRound);
 				}
 			}
 		}
 	}
-	
+
 	.tabbar-wrapper>.tabbar-wrapper {
 		margin-top: 36px;
 		margin-inline: var(--gutter-size);
 		-webkit-app-region: drag;
-	
+
 		.tab {
 			border-radius: 16px !important;
 		}
 	}
-	
+
 	#panels-container {
+		color: var(--colorImageRightFg) !important;
 		background: none !important;
 		transition: width 0.3s ease, opacity 0.3s ease !important;
-	
+
 		&:not(:hover).icons:not(.toolbar-edit-mode *) {
 			width: var(--gutter-size) !important;
 			opacity: 0;
 		}
-	
+
 		.panel-group {
 			margin-left: var(--gutter-size);
 			border-radius: var(--radius);
 			overflow: hidden;
-	
+
 			.panel {
 				background: var(--colorBg);
 			}
 		}
-	
+
 		.button-toolbar {
 			box-shadow: unset !important;
 			border-radius: var(--radius) !important;
 		}
-	
+
 	}
-	
+
 	.mainbar {
+		color: var(--colorImageTopFg) !important;
+		fill: var(--colorImageTopFg) !important;
 		background: none !important;
 		transition: height 0.3s ease, opacity 0.3s ease !important;
 		-webkit-app-region: no-drag !important;
 		height: 48px;
 		opacity: 1;
 		border: unset !important;
-	
+
 		.UrlBar-AddressField {
 			height: 36px !important;
 			border-radius: var(--radiusRound);
@@ -87,167 +96,320 @@
 			border: unset !important;
 			padding: 0 10px;
 		}
+
 		>div {
 			height: inherit !important;
+
 			.toolbar-mainbar {
 				padding-left: 200px;
-			} 
+			}
+
 			.toolbar-mainbar,
 			.button-toolbar.toolbar-spacer-flexible {
 				height: inherit !important;
 				min-height: unset !important;
 			}
 		}
-	
+
 		&:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
 			height: var(--gutter-size) !important;
 			opacity: 0 !important;
 			overflow: hidden !important;
 		}
 	}
-	
+
 	.bookmark-bar {
+		color: var(--colorImageBottomFg) !important;
 		background: none !important;
 		transition: height 0.3s ease, opacity 0.3s ease !important;
 		height: 48px;
 		opacity: 1;
 		border: unset !important;
-	
+
 		&:not(:hover) {
 			height: var(--gutter-size) !important;
 			opacity: 0 !important;
 		}
-	
+
 		button.bookmarkbarItem {
+			color: unset !important;
 			background-color: inherit !important;
 		}
-	
+
 		.observer {
 			justify-content: space-evenly;
 		}
 	}
-}
 
-
-
-/*Theme*/
-#tabs-tabbar-container,.tabbar-wrapper,.tabbar-workspace-button,#panels-container,.startpage-navigation,.startpage-navigation-group,#switch {
-	background: unset !important;
-	backdrop-filter: unset !important;
-	box-shadow: unset !important;
-	border: unset !important
-}
-
-.manager-editor,.sortselector.sortselector-tableheader,.manager-content,.tree-row.folder,.NotesManager,.manager>.toolbar {
-	background: unset !important;
-}
-
-.toolbar-default .button-toolbar>button:enabled {
-	background-color: var(--colorBgAlphaHeavy) !important;
-	background-image: none !important;
-}
-
-#ui-region-panel {
-	max-width: unset !important;
-	min-width: unset !important;
-}
-
-.StatusInfo-Content {
-	margin-inline: auto;
-	border-radius: var(--radiusRound) !important;
-}
-
-
-
-
-svg.svg-tab-stack {
-	border-radius: 15px !important;
-}
-rect{
-	&.outer{
-		stroke: transparent !important;
-		fill: transparent !important;
+	#tabs-tabbar-container,
+	.tabbar-wrapper,
+	.tabbar-workspace-button,
+	#panels-container,
+	.startpage-navigation,
+	.startpage-navigation-group,
+	#switch {
+		background: unset !important;
+		backdrop-filter: unset !important;
+		box-shadow: unset !important;
+		border: unset !important
 	}
-	&.inner{
-		fill: transparent !important;
-		stroke: var(--colorAccentBgDarker) !important;
+
+	.manager-editor,
+	.sortselector.sortselector-tableheader,
+	.manager-content,
+	.tree-row.folder,
+	.NotesManager,
+	.manager>.toolbar {
+		background: unset !important;
 	}
-	&.stack-frame{
-		stroke: var(--colorAccentBgDarker) !important;
+
+	.toolbar-default .button-toolbar>button:enabled {
+		background-color: var(--colorBgAlphaHeavy) !important;
+		background-image: none !important;
+	}
+
+	#ui-region-panel {
+		max-width: unset !important;
+		min-width: unset !important;
+	}
+
+	.StatusInfo-Content {
+		margin-inline: auto;
+		border-radius: var(--radiusRound) !important;
+	}
+
+
+
+
+	svg.svg-tab-stack {
+		border-radius: 15px !important;
+	}
+
+	rect {
+		&.outer {
+			stroke: transparent !important;
+			fill: transparent !important;
+		}
+
+		&.inner {
+			fill: transparent !important;
+			stroke: var(--colorAccentBgDarker) !important;
+		}
+
+		&.stack-frame {
+			stroke: var(--colorAccentBgDarker) !important;
+		}
+	}
+
+
+	.svg-tab-stack rect,
+	.svg-tab-selection rect {
+		rx: 15px !important;
+		ry: 15px !important;
+	}
+
+
+
+	.tabs-left .tab-in-accordion .svg-tab-selection .inner {
+		y: 0px;
+		height: 30px;
+	}
+
+	.tab-position.accordion-toggle-arrow.closed.active {
+		background: transparent !important;
+	}
+
+	.tab:not(.active) {
+		background-color: transparent !important;
+	}
+
+	#browser.win .window-buttongroup button,
+	.window-buttongroup.on-mainbar {
+		fill: inherit !important;
+	}
+
+	.tab-in-accordion {
+		background-color: transparent !important;
+	}
+
+	.tab.active {
+		overflow: auto;
+	}
+
+	.tabswitcher.list {
+		display: flex !important;
+	}
+
+	img.visual-list-preview {
+		display: none;
+	}
+
+	ul.listed-tabs {
+		width: 100%;
+	}
+
+	#modal-bg.modal-tabswitcher {
+		top: 10%;
+		transform: unset !important;
+	}
+
+	button.vivaldi {
+		position: absolute !important;
+		margin: 7px 18px !important;
+	}
+
+	.dial {
+		background: transparent !important;
+		box-shadow: unset !important;
+	}
+
+
+	img.favicon,
+	.favicon>img {
+		filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
+	}
+
+	.SpeedDialView-SearchField {
+		border-radius: var(--radiusRound);
+		padding-inline: 12px;
+	}
+
+	.button-startpage {
+		color: var(--colorImageFg) !important;
+	}
+
+	.speeddial .dial {
+		backdrop-filter: unset !important;
+	}
+
+	.button-textonly.SpeedDialView-SearchField.iconmenu-container.SearchField.below,
+	.StatusInfo-Content {
+		background: var(--colorBgAlphaHeavy) !important;
+		backdrop-filter: var(--backgroundBlur) !important;
 	}
 }
 
 
-.svg-tab-stack rect, .svg-tab-selection rect {
-	rx: 15px !important;
-	ry: 15px !important;
+#browser.tabs-top {
+	--gutter-size: 8px;
+
+	#panels-container {
+		color: var(--colorImageRightFg) !important;
+		background: none !important;
+		transition: width 0.3s ease, opacity 0.3s ease !important;
+
+		&:not(:hover).icons:not(.toolbar-edit-mode *) {
+			width: var(--gutter-size) !important;
+			opacity: 0;
+		}
+
+		.panel-group {
+			margin-left: var(--gutter-size);
+			border-radius: var(--radius);
+			overflow: hidden;
+
+			.panel {
+				background: var(--colorBg);
+			}
+		}
+
+		.button-toolbar {
+			box-shadow: unset !important;
+			border-radius: var(--radius) !important;
+		}
+
+	}
+
+	.inner {
+		margin-bottom: var(--gutter-size);
+		margin-left: var(--gutter-size);
+	}
+
+	#webview-container {
+		border-radius: var(--radius);
+		overflow: hidden;
+	}
+
+
+	#ui-region-panel {
+		max-width: unset !important;
+		min-width: unset !important;
+	}
+
+	.StatusInfo-Content {
+		margin-inline: auto;
+		border-radius: var(--radiusRound) !important;
+	}
+
+
+
+
+	.tabswitcher.list {
+		display: flex !important;
+	}
+
+	img.visual-list-preview {
+		display: none;
+	}
+
+	ul.listed-tabs {
+		width: 100%;
+	}
+
+	#modal-bg.modal-tabswitcher {
+		top: 10%;
+		transform: unset !important;
+	}
+
+	.dial {
+		background: transparent !important;
+		box-shadow: unset !important;
+	}
+
+
+	img.favicon,
+	.favicon>img {
+		filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
+	}
+
+	.SpeedDialView-SearchField {
+		border-radius: var(--radiusRound);
+		padding-inline: 12px;
+	}
+
+	.button-startpage {
+		color: var(--colorImageFg) !important;
+	}
+
+	.speeddial .dial {
+		backdrop-filter: unset !important;
+	}
+
+	.button-textonly.SpeedDialView-SearchField.iconmenu-container.SearchField.below,
+	.StatusInfo-Content {
+		background: var(--colorBgAlphaHeavy) !important;
+		backdrop-filter: var(--backgroundBlur) !important;
+	}
+
+	#tabs-tabbar-container,
+	.tabbar-wrapper,
+	.tabbar-workspace-button,
+	#panels-container,
+	.startpage-navigation,
+	.startpage-navigation-group,
+	#switch {
+		background: unset !important;
+		backdrop-filter: unset !important;
+		box-shadow: unset !important;
+		border: unset !important
+	}
+
+	.manager-editor,
+	.sortselector.sortselector-tableheader,
+	.manager-content,
+	.tree-row.folder,
+	.NotesManager,
+	.manager>.toolbar {
+		background: unset !important;
+	}
 }
-
-
-
-.tabs-left .tab-in-accordion .svg-tab-selection .inner {
-	y: 0px;
-	height: 30px;
-}
-
-.tab-position.accordion-toggle-arrow.closed.active {
-	background: transparent !important;
-}
-
-.tab:not(.active) {
-	background-color: transparent !important;
-}
-
-.toolbar-mainbar {
-	fill: var(--colorFg);
-}
-
-#browser.win .window-buttongroup button, .window-buttongroup.on-mainbar {
-	fill: inherit !important;
-}
-
-.tab-in-accordion {
-	background-color: transparent !important;
-}
-
-.tab.active {
-	overflow: auto;
-}
-
-.tabswitcher.list {
-	display: flex !important;
-}
-
-img.visual-list-preview {
-	display: none;
-}
-
-ul.listed-tabs {
-	width: 100%;
-}
-
-#modal-bg.modal-tabswitcher {
-    top: 10%;
-    transform: unset !important;
-}
-
-button.vivaldi {
-	position: absolute !important;
-	margin: 7px 18px !important;
-}
-
-.dial {
-	background: transparent !important;
-	box-shadow: unset !important;
-}
-
-
-img.favicon, .favicon > img {
-	filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
-}
-
-.SpeedDialView-SearchField {
-    border-radius: var(--radiusRound);
-    padding-inline: 12px;
-}
-
