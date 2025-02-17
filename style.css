@@ -1,0 +1,49 @@
+/* global settings */
+body{
+    --defalutBg: #00000000;
+    --defalutBd: blur(128px);
+    --settingsBg:var(--defalutBg);
+}
+
+/* settings page */
+.vivaldi-settings {
+    background: none !important;
+}
+.settings-sidebar, .settings-content{
+    background: var(--settingsBg) !important;
+}
+
+
+#browser.tabs-top{#main
+    {
+        padding-top: 42px;
+        position: absolute;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+    }
+
+
+}
+#main {
+    backdrop-filter: var(--defalutBd);
+    background: var(--colorBgAlphaBlur);
+
+}
+#header{
+    z-index: 1;
+    backdrop-filter: none!important;
+    background:none!important;
+    box-shadow: none!important;
+    color: var(--colorFg)!important;
+}
+#main:has(.webpageview.active .has-SpeedDial)
+{
+    backdrop-filter: none!important;
+    background:none!important;
+}
+
+
+/* override tool bar color */
+.tabbar-workspace-button,.tab,button.ToolbarButton-Button ,div#tabs-tabbar-container{
+    color: inherit!important;
+}
