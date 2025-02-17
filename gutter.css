@@ -1,9 +1,6 @@
 #browser.tabs-left {
 	--gutter-size: 12px;
-	
-	#main {
-		backdrop-filter: var(--backgroundBlur);
-	}
+
 
 	&.minimal-ui {
 		#webview-container {
@@ -78,7 +75,9 @@
 		}
 
 	}
-
+	.inner:not(.fullscreen){
+		margin-bottom: var(--gutter-size);
+	}
 	.mainbar {
 		color: var(--colorImageTopFg) !important;
 		fill: var(--colorImageTopFg) !important;
@@ -236,23 +235,6 @@
 		overflow: auto;
 	}
 
-	.tabswitcher.list {
-		display: flex !important;
-	}
-
-	img.visual-list-preview {
-		display: none;
-	}
-
-	ul.listed-tabs {
-		width: 100%;
-	}
-
-	#modal-bg.modal-tabswitcher {
-		top: 10%;
-		transform: unset !important;
-	}
-
 	button.vivaldi {
 		position: absolute !important;
 		margin: 7px 18px !important;
@@ -401,7 +383,7 @@
 		backdrop-filter: var(--backgroundBlur) !important;
 	}
 
-	#tabs-tabbar-container,div#header,
+	 #tabs-tabbar-container,
 	.tabbar-wrapper,
 	.tabbar-workspace-button,
 	#panels-container,
@@ -412,7 +394,7 @@
 		backdrop-filter: unset !important;
 		box-shadow: unset !important;
 		border: unset !important
-	}
+	} 
 
 	.manager-editor,
 	.sortselector.sortselector-tableheader,
