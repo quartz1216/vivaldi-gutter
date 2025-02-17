@@ -1,6 +1,6 @@
 #browser.tabs-left {
 	--gutter-size: 12px;
-
+	
 	#main {
 		backdrop-filter: var(--backgroundBlur);
 	}
@@ -319,7 +319,9 @@
 		}
 
 	}
-
+	.tab{
+		border-radius: var(--radiusRound) !important;
+	}
 	.inner {
 		margin-bottom: var(--gutter-size);
 		margin-left: var(--gutter-size);
@@ -341,8 +343,12 @@
 		border-radius: var(--radiusRound) !important;
 	}
 
-
-
+	div#header {
+		min-height: unset !important;
+	}
+	.button-toolbar.horizontal-scroll-arrow.disabled {
+		opacity: 0;
+	}
 
 	.tabswitcher.list {
 		display: flex !important;
@@ -355,7 +361,9 @@
 	ul.listed-tabs {
 		width: 100%;
 	}
-
+	rect.stack-frame {
+		opacity: 0;
+	}
 	#modal-bg.modal-tabswitcher {
 		top: 10%;
 		transform: unset !important;
@@ -365,7 +373,9 @@
 		background: transparent !important;
 		box-shadow: unset !important;
 	}
-
+	div#tabs-subcontainer {
+		background: transparent !important;
+	}
 
 	img.favicon,
 	.favicon>img {
@@ -391,7 +401,7 @@
 		backdrop-filter: var(--backgroundBlur) !important;
 	}
 
-	#tabs-tabbar-container,
+	#tabs-tabbar-container,div#header,
 	.tabbar-wrapper,
 	.tabbar-workspace-button,
 	#panels-container,
@@ -411,5 +421,15 @@
 	.NotesManager,
 	.manager>.toolbar {
 		background: unset !important;
+	}
+	button[name="WorkspaceButton"]>span.button-icon {
+		display: none;
+	}
+	button[name="WorkspaceButton"]>span.button-title {
+		padding-left: 8px;
+	}
+	.svg-tab-stack rect, .svg-tab-selection rect {
+		rx: 16px;
+		ry: 16px;
 	}
 }
