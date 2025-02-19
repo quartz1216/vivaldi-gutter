@@ -1,0 +1,43 @@
+.mainbar {
+    color: var(--colorImageTopFg) !important;
+    fill: var(--colorImageTopFg) !important;
+    background: none !important;
+    transition: var(--mainbarTransition) !important;
+    -webkit-app-region: no-drag !important;
+    height: 48px;
+    opacity: 1;
+    border: unset !important;
+
+    .UrlBar-AddressField {
+        height: 36px !important;
+        border-radius: var(--radiusRound);
+        background-color: var(--colorBgAlphaHeavy);
+        border: unset !important;
+        padding: 0 10px;
+    }
+
+    >div {
+        height: inherit !important;
+
+        .toolbar-mainbar {
+            padding-left: 200px;
+        }
+
+        .toolbar-mainbar,
+        .button-toolbar.toolbar-spacer-flexible {
+            height: inherit !important;
+            min-height: unset !important;
+        }
+    }
+
+    &:not(:hover):not(.toolbar-edit-mode *):not(:focus-within) {
+        height: var(--gutter-size) !important;
+        opacity: 0 !important;
+        overflow: hidden !important;
+    }
+}
+
+#browser:not(.minimal-ui) button.vivaldi {
+    position: absolute !important;
+    margin: 7px 18px !important;
+}

@@ -1,0 +1,23 @@
+/* settings page */
+.vivaldi-settings {
+    background: none !important;
+}
+.settings-sidebar, .settings-content{
+    background: var(--settingsBg) !important;
+}
+
+/* start page */
+nav.startpage-navigation.toolbar-medium {
+    background-color: unset !important;
+    box-shadow: unset !important;
+}
+.startpage-navigation-group{
+    border:unset!important;
+}
+
+.Dashboard {
+    padding-top: 50vh;
+}
+nav.startpage-navigation {
+    order: 1;
+} 

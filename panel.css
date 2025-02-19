@@ -1,0 +1,38 @@
+#panels-container{
+    border: unset !important;
+}
+#ui-region-panel {
+    max-width: unset !important;
+    min-width: unset !important;
+}	
+
+#panels-container {
+    color: var(--colorImageRightFg) !important;
+    background: none !important;
+    transition:var(--panelTransition) !important;
+
+    &:not(:hover).icons:not(.toolbar-edit-mode *) {
+        width: var(--gutter-size) !important;
+        opacity: 0;
+    }
+
+    .panel-group {
+        margin-left: var(--gutter-size);
+        border-radius: var(--radius);
+        overflow: hidden;
+
+        .panel {
+            background: var(--colorBg);
+        }
+    }
+
+    .button-toolbar {
+        box-shadow: unset !important;
+        border-radius: var(--radius) !important;
+    }
+
+}
+
+#switch{
+    backdrop-filter: unset !important;
+}

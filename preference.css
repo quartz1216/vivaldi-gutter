@@ -1,0 +1,13 @@
+#browser{
+    --gutter-size: 8px;
+    --defalutBg: #00000000;
+    --defalutBd: blur(128px);
+    --settingsBg:var(--defalutBg);
+    --transitionDuration: 0.3s;
+
+    /* transitions */
+    --webpageviewTransition: all var(--transitionDuration);
+    --mainbarTransition: height var(--transitionDuration), opacity var(--transitionDuration);
+    --panelTransition: width var(--transitionDuration), opacity var(--transitionDuration);
+    --tabTransition: background-color var(--transitionDuration);
+}

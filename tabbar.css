@@ -1,0 +1,36 @@
+#tabs-tabbar-container {
+    backdrop-filter: unset !important;
+}
+
+.tabbar-wrapper {
+    background-color: unset !important;
+}
+
+.tabbar-workspace-button {
+    backdrop-filter: unset !important;
+    box-shadow: unset !important;
+}
+
+img.favicon,
+.favicon>img {
+    filter: drop-shadow(0px 0px 0.5px var(--colorFg)) !important;
+}
+
+.tab {
+    transition: var(--tabTransition);
+}
+
+div#tabs-subcontainer {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    border: antiquewhite;
+}
+
+.tabbar-wrapper>.tabbar-wrapper {
+    margin-inline: var(--gutter-size);
+    -webkit-app-region: drag;
+
+    .tab {
+        border-radius: 16px !important;
+    }
+}

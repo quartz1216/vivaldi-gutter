@@ -1,50 +1,79 @@
-/* global settings */
-body{
-    --defalutBg: #00000000;
-    --defalutBd: blur(128px);
-    --settingsBg:var(--defalutBg);
-}
-
-/* settings page */
-.vivaldi-settings {
-    background: none !important;
-}
-.settings-sidebar, .settings-content{
-    background: var(--settingsBg) !important;
-}
-
-
-#browser.tabs-top{#main
-    {
-        padding-top: 42px;
-        position: absolute;
-        width: -webkit-fill-available;
-        height: -webkit-fill-available;
-    }
-
-
-}
+/* background blur and background */
 #main {
     backdrop-filter: var(--defalutBd);
-    background: var(--colorBgAlphaBlur);
+    background-color: var(--colorBgAlphaBlur);
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+
+/* turn off header visual effect */
+#header {
+    z-index: 1;
+    backdrop-filter: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: var(--colorFg) !important;
+}
+
+/* popup window exception */
+#browser.popup , #browser.minimal-ui {
+    #header {
+        backdrop-filter: var(--defalutBd) !important;
+        background-color: var(--colorBgAlphaBlur) !important;
+    }
+
+    .mainbar {
+        display: none !important;
+    }
 
 }
-#header{
-    z-index: 1;
-    backdrop-filter: none!important;
-    background:none!important;
-    box-shadow: none!important;
-    color: var(--colorFg)!important;
-}
-#main:has(.webpageview.active .has-SpeedDial)
-{
-    backdrop-filter: none!important;
-    background:none!important;
+
+/* start page exception */
+#main:has(.webpageview.active .has-SpeedDial) {
+    backdrop-filter: blur(0px) !important;
+    background-color: transparent !important;
 }
 
 
 /* override tool bar color */
-.tabbar-workspace-button,.tab,button.ToolbarButton-Button ,div#tabs-tabbar-container{
-    color: inherit!important;
+.tabbar-workspace-button,
+.tab,
+button.ToolbarButton-Button,
+div#tabs-tabbar-container {
+    color: inherit !important;
 }
- 
+
+/* webpage view transition */
+
+.webpageview {
+    transition: var(--webpageviewTransition);
+
+    &:not(.pagefocusstop) {
+        transform: translateY(20vh);
+    }
+}
+
+/* status bar tweak */
+.StatusInfo-Content {
+    margin-inline: auto;
+    border-radius: var(--radiusRound) !important;
+}
+
+#webview-container {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+#browser:not(.fullscreen) .inner{
+    margin-bottom: var(--gutter-size);
+}
+
+.minimal-ui {
+    #webview-container {
+        border-radius: 0 !important;
+    }
+    .inner{
+        margin-bottom: 0!important;
+    }
+    .mainbar {
+        display: none !important;
+    }
+} 
