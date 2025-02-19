@@ -34,3 +34,19 @@ div#tabs-subcontainer {
         border-radius: 16px !important;
     }
 }
+div#tabs-tabbar-container {
+    box-shadow: none !important;
+}
+
+.tabbar-wrapper {
+    border-radius: var(--radius) !important;
+    overflow: hidden;
+}
+
+.tabbar-workspace-button, #tabs-tabbar-container,.tabbar-wrapper,.tabbar-wrapper::after,.tabbar-wrapper::before {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+#browser.mac .tabbar-wrapper>.tabbar-wrapper{
+    padding-top:40px!important;
+}

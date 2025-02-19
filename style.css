@@ -15,7 +15,8 @@
 }
 
 /* popup window exception */
-#browser.popup , #browser.minimal-ui {
+#browser.popup,
+#browser.minimal-ui {
     #header {
         backdrop-filter: var(--defalutBd) !important;
         background-color: var(--colorBgAlphaBlur) !important;
@@ -38,9 +39,31 @@
 .tabbar-workspace-button,
 .tab,
 button.ToolbarButton-Button,
-div#tabs-tabbar-container {
-    color: inherit !important;
+div#tabs-tabbar-container,
+div#panels-container,
+.button-startpage,
+.mainbar {
+    color: var(--colorFg) !important;
+    fill: var(--colorFg) !important;
 }
+
+#main:has(.webpageview.active .has-SpeedDial) {
+
+    .tabbar-workspace-button,
+    .tab,
+    button.ToolbarButton-Button,
+    div#tabs-tabbar-container,
+    div#panels-container,
+    .button-startpage,
+    .mainbar {
+        color: var(--colorImageTopFg) !important;
+        fill: var(--colorImageTopFg) !important;
+    }
+
+}
+
+
+
 
 /* webpage view transition */
 
@@ -62,7 +85,8 @@ div#tabs-tabbar-container {
     border-radius: var(--radius);
     overflow: hidden;
 }
-#browser:not(.fullscreen) .inner{
+
+#browser:not(.fullscreen) .inner {
     margin-bottom: var(--gutter-size);
 }
 
@@ -70,10 +94,12 @@ div#tabs-tabbar-container {
     #webview-container {
         border-radius: 0 !important;
     }
-    .inner{
-        margin-bottom: 0!important;
+
+    .inner {
+        margin-bottom: 0 !important;
     }
+
     .mainbar {
         display: none !important;
     }
-} 
+}

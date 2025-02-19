@@ -7,7 +7,6 @@
 }	
 
 #panels-container {
-    color: var(--colorImageRightFg) !important;
     background: none !important;
     transition:var(--panelTransition) !important;
 

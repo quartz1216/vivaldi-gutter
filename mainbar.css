@@ -1,6 +1,4 @@
 .mainbar {
-    color: var(--colorImageTopFg) !important;
-    fill: var(--colorImageTopFg) !important;
     background: none !important;
     transition: var(--mainbarTransition) !important;
     -webkit-app-region: no-drag !important;
