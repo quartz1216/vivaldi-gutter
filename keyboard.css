@@ -1,4 +1,4 @@
-/* window */
+
 .keycombo:has([for="combo-command_open_new_or_reopen_last_closed_window"]) ,
 .keycombo:has([for="combo-command_show_welcome"]) ,
 .keycombo:has([for="combo-command_show_clear_private_data"]) ,
@@ -36,7 +36,7 @@
 .keycombo:has([for="combo-command_add_new_calendar_account"]) ,
 .keycombo:has([for="combo-command_show_mail"]) ,
 .keycombo:has([for="combo-command_show_help"]) ,
-/* view */
+
 .keycombo:has([for="combo-command_customize_toolbar"]) ,
 .keycombo:has([for="combo-command_show_bookmark_bar"]) ,
 .keycombo:has([for="combo-command_toggle_menu_position"]) ,
@@ -67,7 +67,7 @@
 .keycombo:has([for="combo-command_show_tasks_panel"]) ,
 .keycombo:has([for="combo-command_show_feeds_panel"]) ,
 .keycombo:has([for="combo-command_show_contacts_panel"]) ,
-/* tab */
+
 .keycombo:has([for="combo-command_new_tab_outside_group"]) ,
 .keycombo:has([for="combo-command_new_background_tab"]) ,
 .keycombo:has([for="combo-command_position_tab_top"]) ,
@@ -111,14 +111,14 @@
 .keycombo:has([for="combo-command_transform_3d"]) ,
 .keycombo:has([for="combo-command_transitions_forced"]) ,
 .keycombo:has([for="combo-command_transitions_removed"]) ,
-/* page */
+
 .keycombo:has([for="combo-command_import_data"]) ,
 .keycombo:has([for="combo-command_export_data"]) ,
 .keycombo:has([for="combo-command_add_to_web_panel"]) ,
 .keycombo:has([for="combo-command_copy_selection_to_note"]) ,
 .keycombo:has([for="combo-command_append_selection_to_note"]) ,
 .keycombo:has([for="combo-command_page_qr_code"]) ,
-/* category */
+
 .category:has([for="combo-command_calendar_viewmode_day"]), 
 .category:has([for="combo-command_mail_compose_new_message"]) 
 {

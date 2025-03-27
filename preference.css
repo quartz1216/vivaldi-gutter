@@ -1,7 +1,7 @@
 #browser{
-    --gutter-size: 8px;
+    --gutter-size: 10px;
     --defalutBg: #00000000;
-    --defalutBd: blur(128px);
+    --defalutBd: blur(30px);
     --settingsBg:var(--defalutBg);
     --transitionDuration: 0.3s;
     --disableInfrequentlyUseKeycombo:none; /* if you want to enable infrequently use keycombo, change none to unset */

@@ -39,3 +39,42 @@
     position: absolute !important;
     margin: 7px 18px !important;
 }
+/* 
+.mainbar {
+    width: var(--Width);
+    margin-inline: var(--gutter-size);
+    background: none !important;
+    border: none;
+    height: fit-content;
+}
+
+.toolbar-mainbar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 !important;
+    height: unset !important;
+}
+
+.win .window-buttongroup {
+    position: relative !important;
+
+    button {
+        width: 46px !important;
+        height: 46px !important;
+    }
+}
+
+button.vivaldi {
+    position: relative !important;
+    order: -2;
+    margin: unset !important;
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    scale: unset !important;
+
+    span.expand-arrow {
+        display: none;
+    }
+} */
+

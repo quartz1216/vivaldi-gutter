@@ -35,3 +35,13 @@
 #switch{
     backdrop-filter: unset !important;
 }
+
+#main.left{
+    #webview-container{
+        margin-right: var(--gutter-size) !important;
+    }
+    .panel-group{
+        margin-left:0!important;
+        margin-right:var(--gutter-size)!important;
+    }
+}

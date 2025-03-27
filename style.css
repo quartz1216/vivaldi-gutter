@@ -86,11 +86,11 @@ div#panels-container,
     overflow: hidden;
 }
 
-#browser:not(.fullscreen) .inner {
+#browser .inner {
     margin-bottom: var(--gutter-size);
 }
 
-.minimal-ui {
+.minimal-ui:not(.mac) {
     #webview-container {
         border-radius: 0 !important;
     }
@@ -102,4 +102,15 @@ div#panels-container,
     .mainbar {
         display: none !important;
     }
+}
+
+.inner ,div#panels{
+    contain: unset!important;
+}
+
+div#webview-container:not(:has(.webpageview.active .has-SpeedDial)),.panel-group{
+    box-shadow: #2b2b2b4d 0px 4px 12px 0px;
+}
+div#tabs-tabbar-container {
+    overflow: hidden;
 }

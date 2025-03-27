@@ -1,6 +1,6 @@
 /* settings page */
 .vivaldi-settings {
-    background: none !important;
+    background: var(--colorBgAlphaHeavier);
 }
 
 .settings-sidebar,
