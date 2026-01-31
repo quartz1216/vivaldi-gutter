@@ -1,4 +1,4 @@
-.mainbar {
+/*.mainbar {
     background: none !important;
     transition: var(--mainbarTransition) !important;
     -webkit-app-region: no-drag !important;
@@ -39,7 +39,7 @@
     position: absolute !important;
     margin: 7px 18px !important;
 }
-/* 
+ 
 .mainbar {
     width: var(--Width);
     margin-inline: var(--gutter-size);
@@ -77,4 +77,3 @@ button.vivaldi {
         display: none;
     }
 } */
-

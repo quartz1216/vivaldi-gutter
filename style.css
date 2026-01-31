@@ -1,21 +1,21 @@
 /* background blur and background */
 #main {
-    backdrop-filter: var(--defalutBd);
-    background-color: var(--colorBgAlphaBlur);
-    transition: background-color 0.3s, backdrop-filter 0.3s;
+    /* backdrop-filter: var(--defalutBd); */
+    /* background-color: var(--colorBgAlphaBlur); */
+    /* transition: background-color 0.3s, backdrop-filter 0.3s; */
 }
 
 /* turn off header visual effect */
-#header {
+/* #header {
     z-index: 1;
     backdrop-filter: none !important;
     background: none !important;
     box-shadow: none !important;
     color: var(--colorFg) !important;
-}
+} */
 
 /* popup window exception */
-#browser.popup,
+/* #browser.popup,
 #browser.minimal-ui {
     #header {
         backdrop-filter: var(--defalutBd) !important;
@@ -26,12 +26,20 @@
         display: none !important;
     }
 
-}
+} */
 
 /* start page exception */
+
+.mainbar {
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+    backdrop-filter: var(--defalutBd);
+}
+
 #main:has(.webpageview.active .has-SpeedDial) {
-    backdrop-filter: blur(0px) !important;
-    background-color: transparent !important;
+    & .mainbar {
+        backdrop-filter: blur(0px) !important;
+        background-color: transparent !important;
+    }
 }
 
 
@@ -81,16 +89,17 @@ div#panels-container,
     border-radius: var(--radiusRound) !important;
 }
 
+/* 
 #webview-container {
     border-radius: var(--radius);
     overflow: hidden;
-}
+} */
 
-#browser .inner {
+/* #browser .inner {
     margin-bottom: var(--gutter-size);
-}
+} */
 
-.minimal-ui:not(.mac) {
+/* .minimal-ui:not(.mac) {
     #webview-container {
         border-radius: 0 !important;
     }
@@ -102,15 +111,18 @@ div#panels-container,
     .mainbar {
         display: none !important;
     }
-}
+} */
 
-.inner ,div#panels{
-    contain: unset!important;
-}
+/* .inner,
+div#panels {
+    contain: unset !important;
+} */
 
-div#webview-container:not(:has(.webpageview.active .has-SpeedDial)),.panel-group{
+/* div#webview-container:not(:has(.webpageview.active .has-SpeedDial)),
+.panel-group {
     box-shadow: #2b2b2b4d 0px 4px 12px 0px;
-}
-div#tabs-tabbar-container {
+} */
+
+/* div#tabs-tabbar-container {
     overflow: hidden;
-}
+} */

@@ -1,4 +1,4 @@
-div#browser:has(.tabbar-workspace-button[style="width: 0px;"]) {--Width: 0px;}
+/* div#browser:has(.tabbar-workspace-button[style="width: 0px;"]) {--Width: 0px;}
 div#browser:has(.tabbar-workspace-button[style="width: 1px;"]) {--Width: 1px;}
 div#browser:has(.tabbar-workspace-button[style="width: 2px;"]) {--Width: 2px;}
 div#browser:has(.tabbar-workspace-button[style="width: 3px;"]) {--Width: 3px;}
@@ -358,4 +358,4 @@ div#browser:has(.tabbar-workspace-button[style="width: 356px;"]) {--Width: 356px
 div#browser:has(.tabbar-workspace-button[style="width: 357px;"]) {--Width: 357px;}
 div#browser:has(.tabbar-workspace-button[style="width: 358px;"]) {--Width: 358px;}
 div#browser:has(.tabbar-workspace-button[style="width: 359px;"]) {--Width: 359px;}
-div#browser:has(.tabbar-workspace-button[style="width: 360px;"]) {--Width: 360px;}
+div#browser:has(.tabbar-workspace-button[style="width: 360px;"]) {--Width: 360px;} */

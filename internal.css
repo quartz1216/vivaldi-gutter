@@ -1,5 +1,5 @@
 /* settings page */
-.vivaldi-settings {
+/* .vivaldi-settings {
     background: var(--colorBgAlphaHeavier);
 }
 
@@ -58,9 +58,9 @@ nav.TabbedView-List,.TabbedView-Footer,.master,.detail,.master-toolbar,.master-t
 }
 li + li {
     box-shadow: none !important;
-}
+} */
 /* start page */
-nav.startpage-navigation.toolbar-medium {
+/* nav.startpage-navigation.toolbar-medium {
     background-color: unset !important;
     box-shadow: unset !important;
 }
@@ -79,9 +79,9 @@ nav.startpage-navigation {
 .startpage-navigation-group>.button-toolbar:last-child {
     display: none !important;
 }
-
+ */
 /* bookmark */
-.bookmark,.history  {
+/* .bookmark,.history  {
     border-radius: var(--radius) !important;
     padding: 8px;
     background: var(--colorBgAlphaHeavy) !important;
@@ -100,4 +100,4 @@ nav.startpage-navigation {
     border:none !important;
     background-color: var(--colorBgIntense) !important;
     background-image:unset!important;
-}
+} */
