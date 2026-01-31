@@ -1,56 +1,11 @@
-.mainbar {
-    transition: background-color 0.3s, backdrop-filter 0.3s;
-    backdrop-filter: var(--defalutBd);
-}
-
-#main:has(.webpageview.active .has-SpeedDial) {
-    & .mainbar {
-        backdrop-filter: blur(0px) !important;
-        background-color: transparent !important;
-    }
-}
-
-
-/* override tool bar color */
-.tabbar-workspace-button,
-.tab,
-button.ToolbarButton-Button,
-div#tabs-tabbar-container,
-div#panels-container,
-.button-startpage,
-.mainbar {
-    color: var(--colorFg) !important;
-    fill: var(--colorFg) !important;
-}
-
-#main:has(.webpageview.active .has-SpeedDial) {
-
-    .tabbar-workspace-button,
-    .tab,
-    button.ToolbarButton-Button,
-    div#tabs-tabbar-container,
-    div#panels-container,
-    .button-startpage,
-    .mainbar {
-        color: var(--colorImageTopFg) !important;
-        fill: var(--colorImageTopFg) !important;
-    }
-
-}
-
-
-
-
-/* webpage view transition */
 .webpageview {
-    transition: var(--webpageviewTransition);
+    transition: all 0.3s;
 
     &:not(.pagefocusstop) {
         transform: translateY(20vh);
     }
 }
 
-/* status bar tweak */
 .StatusInfo-Content {
     margin-inline: auto;
     border-radius: var(--radiusRound) !important;
