@@ -1,8 +1,9 @@
 # vivaldi-gutter
 > [!NOTE]
-> vivaidi has officially implemented UI Auto Hide.
-> That one is better made and more user-friendly, so it’s better to use that.
-
+> Vivaldi's UI has undergone significant evolution recently.
+> While primarily focused on implementing auto-hide, now that it's officially supported, this CSS is no longer necessary.
+> We'll retain only the transitions for pages where it's not implemented and remove the rest.
+> We extend our gratitude to Vivaldi Technologies and its all!
 
 https://youtu.be/PYPnOi8MHDM
 
